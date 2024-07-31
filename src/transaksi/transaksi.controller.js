@@ -54,7 +54,7 @@ transaksiRouter.post("/tambah", async (req, res) => {
       errorMessage = message;
       throw new Error(message);
     }
-
+// buat objek
     const sendObj = {
       _id: req.body.transaksiId,
       pengirim: pengirim._id,
@@ -87,7 +87,7 @@ transaksiRouter.post("/tambah", async (req, res) => {
           "content-type": "application/json",
         };
         const chaincode = 'melon'
-        request(
+        request( //inisiasasi permintaan http request ke middleware
           {
             method: "post",
             url: `http://localhost:8085/create/${chaincode}`,
