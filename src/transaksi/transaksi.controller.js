@@ -87,7 +87,7 @@ transaksiRouter.post("/tambah", async (req, res) => {
           "content-type": "application/json",
         };
         const chaincode = 'melon'
-        request( // lib untuk request ke middleware
+        request( // lib untuk request ke SDK
           {
             method: "post",
             url: `http://localhost:8085/create/${chaincode}`,
